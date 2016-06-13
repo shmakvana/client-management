@@ -1,0 +1,121 @@
+<div ng-controller="UserController">
+	<div class="box-header ui-sortable-handle">
+		<h4 class="box-title">Fill Client Information</h4>
+	</div>
+	<div class="box-body">
+		<table class="table table-condensed">
+			<tr>
+				<td><label for="clientId">Client ID </label></td>
+				<td>
+					<input type="text"
+					 id="txtClientId" class="form-control"
+					ng-model="user.clientId" ng-disabled="textStatus" />
+				</td>
+				<td><label for="firstName">FirstName</label> </td>
+				<td>
+					<input type="text"
+					 id="txtFirstName" class="form-control"
+					ng-model="user.name.firstName" />
+				</td>
+			</tr>
+			<tr>
+				<td><label for="lastName">Last Name</label> </td>
+				<td>
+					<input type="text"
+					 id="txtlastName" class="form-control"
+					ng-model="user.name.lastName" />
+				</td>
+				<td><label for="emailId">Email Id</label></td>
+				<td>
+					 <input type="text"
+					 id="txtemailId" class="form-control"
+					ng-model="user.email" />
+				</td>
+			</tr>
+			<tr>
+				<td><label for="phoneNumber">Phone Number </label></td>
+				<td>
+					 <input type="text"
+					 id="txtphoneNumber" class="form-control"
+					ng-model="user.phone" />
+				</td>
+				<td><label for="businessName">Business Name</label> </td>
+				<td>
+					<input type="text"
+					 id="txtbusinessName" class="form-control"
+					ng-model="user.businessName" />
+				</td>
+			</tr>
+			<tr>
+				<td><label for="bankAccountNumber">Bank Account Number </label></td>
+				<td>
+					 <input type="text"
+					 id="txtbankAccountNumber" class="form-control"
+					ng-model="user.bankAccountNumber" />
+				</td>
+				<td><label for="street1">Street 1</label></td>
+				<td>
+					 <input type="text"
+					id="txtStreet1" class="form-control"
+					ng-model="user.address.street1" />
+				</td>
+			</tr>
+			<tr>
+				
+				<td><label for="street2">Street 2</label></td>
+				<td>
+					 <input type="text"
+					id="txtStreet2" class="form-control"
+					ng-model="user.address.street2" />
+				</td>
+				<td><label for="city">City</label></td>
+				<td>
+					 <input type="text"
+					id="txtCity" class="form-control"
+					ng-model="user.address.city" />
+				</td>
+			</tr>		
+			<tr>
+				<td><label for="address">State</label></td>
+				<td>
+					 <input type="text"
+					id="txtState" class="form-control"
+					ng-model="user.address.state" />
+				</td>
+				<td><label for="country">Country</label></td>
+				<td>
+					<input type="text"
+					id="txtCountry" class="form-control"
+					ng-model="user.address.country" />
+				</td>
+			</tr>	
+			<tr>
+				<td><label for="pinCode">PinCode</label></td>
+				<td >
+					 <input type="text"
+					id="txtPinCode" class="form-control"
+					ng-model="user.address.pinCode" />
+				</td>
+				<td><label for="status">Status</label></td>
+				<td>
+					<select class="form-control" ng-model="user.status">
+						<option>Active</option>
+						<option>passive</option>
+						<option>pipeline</option>
+						<option>prospect</option>
+					</select>
+				</td>
+			</tr>				
+		</table>
+		<!-- /.box-body -->
+		<div class="box-footer">
+			<button type="submit" class="btn btn-primary btn-sm"
+				ng-click="saveInfo(user)">
+				<i class="fa fa-fw fa-save"></i> Add New
+			</button>
+			<button class="btn btn-primary btn-sm" ng-click="changeState()">
+				<i class="fa fa-fw fa-backward"></i> Back
+			</button>
+		</div>
+	</div>
+</div>
