@@ -1,0 +1,172 @@
+<div ng-controller="UserController">
+	<div class="box-header ui-sortable-handle">
+		<h4 class="box-title">Show Client Information</h4>
+	</div>
+	
+	<div id="add-task-panel" ng-hide="toggle">
+		<div class="box-body">
+			<table class="table table-condensed">
+				<tr>
+					<td><label for="clientId">Client ID </label></td>
+					<td>
+						<input type="text"
+						 id="txtClientId" class="form-control"
+						ng-model="user.clientId" ng-disabled="true" />
+					</td>
+					<td><label for="firstName">FirstName</label> </td>
+					<td>
+						<input type="text"
+						 id="txtFirstName" class="form-control"
+						ng-model="user.name.firstName" />
+					</td>
+				</tr>
+				<tr>
+					<td><label for="lastName">Last Name</label> </td>
+					<td>
+						<input type="text"
+						 id="txtlastName" class="form-control"
+						ng-model="user.name.lastName" />
+					</td>
+					<td><label for="emailId">Email Id</label></td>
+					<td>
+						 <input type="text"
+						 id="txtemailId" class="form-control"
+						ng-model="user.email" />
+					</td>
+				</tr>
+				<tr>
+					<td><label for="phoneNumber">Phone Number </label></td>
+					<td>
+						 <input type="text"
+						 id="txtphoneNumber" class="form-control"
+						ng-model="user.phone" />
+					</td>
+					<td><label for="businessName">Business Name</label> </td>
+					<td>
+						<input type="text"
+						 id="txtbusinessName" class="form-control"
+						ng-model="user.businessName" />
+					</td>
+				</tr>
+				<tr>
+					<td><label for="bankAccountNumber">Bank Account Number </label></td>
+					<td>
+						 <input type="text"
+						 id="txtbankAccountNumber" class="form-control"
+						ng-model="user.bankAccountNumber" />
+					</td>
+					<td><label for="street1">Street 1</label></td>
+					<td>
+						 <input type="text"
+						id="txtStreet1" class="form-control"
+						ng-model="user.address.street1" />
+					</td>
+				</tr>
+				<tr>
+					
+					<td><label for="street2">Street 2</label></td>
+					<td>
+						 <input type="text"
+						id="txtStreet2" class="form-control"
+						ng-model="user.address.street2" />
+					</td>
+					<td><label for="city">City</label></td>
+					<td>
+						 <input type="text"
+						id="txtCity" class="form-control"
+						ng-model="user.address.city" />
+					</td>
+				</tr>		
+				<tr>
+					<td><label for="address">State</label></td>
+					<td>
+						 <input type="text"
+						id="txtState" class="form-control"
+						ng-model="user.address.state" />
+					</td>
+					<td><label for="country">Country</label></td>
+					<td>
+						<input type="text"
+						id="txtCountry" class="form-control"
+						ng-model="user.address.country" />
+					</td>
+				</tr>	
+				<tr>
+					<td><label for="pinCode">PinCode</label></td>
+					<td >
+						 <input type="text"
+						id="txtPinCode" class="form-control"
+						ng-model="user.address.pinCode" />
+					</td>
+					<td><label for="status">Status</label></td>
+					<td>
+						<select class="form-control" ng-model="user.status">
+							<option>Active</option>
+							<option>passive</option>
+							<option>pipeline</option>
+							<option>prospect</option>
+						</select>
+					</td>
+				</tr>				
+			</table>
+			<!-- /.box-body -->
+			<div class="box-footer">
+				<button type="submit" class="btn btn-primary btn-sm"
+					ng-click="updateInfo(user)">
+					<i class="fa fa-fw fa-save"></i> Update
+				</button>
+			</div>
+		</div>
+	
+	</div>
+	
+	<div ng-init="getUserInfo()" class="box" ng-show="toggle">
+		<div class="box-body">
+			<table class="table table-condensed">
+				<tr>
+					<td>
+						Name <div ng-class="getSortClass('name')"></div>
+					</td>
+					<td>
+						Business Name <div ng-class="getSortClass('businessName')"></div>
+					</td>
+					<td>
+						Email <div ng-class="getSortClass('businessName')"></div>
+					</td>
+					<td>
+						Phone <div ng-class="getSortClass('Phone')"></div>
+					</td>
+					<td>
+						City <div ng-class="getSortClass('City')"></div>
+					</td>
+					<td>
+						Status <div ng-class="getSortClass('Status')"></div>
+					</td>
+					<td><label>Actions</label></td>
+				</tr>
+				
+				<tr ng-repeat="user in userData ">
+					<td>{{user.name.firstName + ' '  + user.name.lastName}}</td>
+					<td>{{user.businessName}}</td>
+					<td>{{user.email}}</td>
+					<td>{{user.phone}}</td>
+					<td>{{user.address.city}}</td>
+					<td>{{user.status}}</td>
+					<td>
+						<div class="row">
+							<Button id="btnEdit" class="btn btn-primary btn-sm"
+								ng-click="editInfo(user)">
+								<span class="glyphicons glyphicons-edit"></span> Edit
+							</Button>
+							
+							<Button id="btnRemove" class="btn btn-primary btn-sm"
+								ng-click="deleteUserInfo(user.clientId)">
+								<i class="fa fa-fw fa-user-times"></i> Remove
+							</Button>
+						</div>
+					</td>
+				</tr>				
+			</table>
+		</div>
+	</div>
+</div>
