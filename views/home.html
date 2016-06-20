@@ -1,4 +1,17 @@
-<div class="">
-	<img ng-src="assert/img/bg.jpg" alt="Description"  width="100%" height="100%"/>
+<div ng-controller="UserController" ng-init="init()">
+	<div class="box-body">
+		<table class="table-condensed">
+			<tr>
+				<td><label>Users Status </label></td>
+				<td><label> : </label></td>
+				<td><label> Count </label></td>
+			</tr>
+			<tr ng-repeat="countStatus in status ">
+				<td><label>{{ countStatus.code}} </label></td>
+				<td><label> : </label></td>
+				<td><label>{{ countStatus.count}} </label></td>
+			</tr>
+		</table>
+	</div>	
 </div>
 

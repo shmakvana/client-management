@@ -42,7 +42,7 @@ function UserService($http, $rootScope) {
 									country : "India",
 									pincode : "380015"
 								  },
-						status : 'Active'
+						status : 'Passive'
 					},
 					{
 						clientId : 3,
@@ -62,7 +62,7 @@ function UserService($http, $rootScope) {
 									country : "India",
 									pincode : "380015"
 								  },
-						status : 'Active'
+						status : 'Passive'
 					},
 					{
 						clientId : 4,
@@ -82,7 +82,87 @@ function UserService($http, $rootScope) {
 									country : "India",
 									pincode : "380015"
 								  },
+						status : 'Prospect'
+					},
+					{
+						clientId : 5,
+						name : {
+								firstName : 'Sagar',
+								lastName : 'Makvana'
+							},
+						businessName : 'Software Devloper',
+						email : 'sagar@gmail.com',
+						phone : '7405208718',
+						bankAccountNumber : '',
+						address : {
+									street1 : "pipaliya hall main road",
+									street2 : "ABC",
+									city : "Rajkot",
+									state : "Gujarat",
+									country : "India",
+									pincode : "360002"
+								  },
 						status : 'Active'
+					},
+					{
+						clientId : 6,
+						name : {
+								firstName : 'Ankur',
+								lastName : 'Gandhi'
+							},
+						businessName : 'Software Devloper',
+						email : 'ankur@gmail.com',
+						phone : '9998988755',
+						bankAccountNumber : '',
+						address : {
+									street1 : "iscon main road",
+									street2 : "ABC",
+									city : "Ahmedabad",
+									state : "Gujarat",
+									country : "India",
+									pincode : "380015"
+								  },
+						status : 'Prospect'
+					},
+					{
+						clientId : 7,
+						name : {
+								firstName : 'Nitin',
+								lastName : 'Sharma'
+							},
+						businessName : 'Software Devloper',
+						email : 'nitin@gmail.com',
+						phone : '8877899887',
+						bankAccountNumber : '',
+						address : {
+									street1 : "Iscon main road",
+									street2 : "ABC",
+									city : "Ahmedabad",
+									state : "Gujarat",
+									country : "India",
+									pincode : "380015"
+								  },
+						status : 'Pipeline'
+					},
+					{
+						clientId : 8,
+						name : {
+								firstName : 'Harshraj',
+								lastName : 'chavda'
+							},
+						businessName : 'Software Devloper',
+						email : 'harshraj@gmail.com',
+						phone : '8877899887',
+						bankAccountNumber : '',
+						address : {
+									street1 : "Iscon main road",
+									street2 : "ABC",
+									city : "Ahmedabad",
+									state : "Gujarat",
+									country : "India",
+									pincode : "380015"
+								  },
+						status : 'Pipeline'
 					}					
 				   ];
 
